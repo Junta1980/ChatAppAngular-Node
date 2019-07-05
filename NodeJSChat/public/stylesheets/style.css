@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.center {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
+}
+
+input {
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+  border-radius: 3px 3px 3px 3px;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #1995AD; 
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background .3s ease;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.centered-form {
+  background: #333744;
+  width: 100vw;
+  height: 80vh;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form__box {
+  box-shadow: 0px 0px 17px 1px #1D1F26;
+  background: #F7F7FA;
+  padding: 24px;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.centered-form button {
+  width: 100%;
+}
+
+.centered-form input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* Chat Page Layout */
+
+.chat {
+  display: flex;
+}
+
+.chat__main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+  min-height: 20vh;
+ 
+}
+
+.chat__messages {
+  display: block;
+  flex-grow: 1;
+  padding: 2px 2px 0 2px;
+  overflow-y: scroll;
+  border: #5fb9c7 1px solid;
+  margin-bottom: 2px;  
+  width: 80%;
+  border-radius: 4px;
+   
+}
+
+
+.message {
+  margin-bottom: 2px;   
+  width:100%
+}
+
+
+.userromm {
+  color: white;
+  padding: 2px;
+  background-color: #5fb9c7; 
+  width: 15%;
+  margin-bottom: 4px;  
+  border: 1px solid  #e9e9e9;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.chat__sidebar {
+  display: block;
+  width: 10%;
+  margin-left: 2px;
+  background-color: #5fb9c7; 
+  border-radius: 3px 3px 3px 3px;
+} 
+
+
+.list-title {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding: 12px 24px 0 24px;
+}
+
+.users {
+  display: block;
+  color: white;
+  margin-left: 15px;
+}
+
+.typemsg{
+  color: gray;
+}

@@ -1,0 +1,59 @@
+<div class="container" #scrollall>
+  <div class="row mt-2 ml-2">
+    
+    <form id="myform" #userFrom="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <input type="text" placeholder="Insert Nickname" class="form-control" name="name" 
+          [(ngModel)]="user.name"
+            maxlength="10" 
+          >
+        <input type="text"  placeholder="Insert rom" class="form-control mt-2" name="room" 
+        [(ngModel)]="user.room"
+          maxlength="15" 
+          >
+
+          <input type="submit" value="join" class="btn btn-success mt-2" form="myform"  [hidden]="inUser">
+        </div>
+    </form>
+
+    
+  </div>
+
+  <div class="bg-danger" [hidden]="!erronick"> {{ erronick }}</div>
+  <div class="row mt-2 ml-2 mb-12">
+  <div class="chatpage " #scrollMe>
+    <div class='msg'  *ngFor="let msg of arrmsg; let last = last">
+      {{ msg }}
+      {{last ? scrollToBottom() : ''}}
+    </div>
+    <div class='msg msgtype'  *ngFor="let msgtype of msgtypes; let last = last">
+      {{ msgtype.message }}
+      {{last ? scrollToBottom() : ''}}
+    </div>    
+  </div>
+  <div class="usrom" >
+    <div *ngFor="let usr of userinroom"> {{usr}} </div>
+  </div>
+</div>
+
+  <div class="row mt-2 ml-2 mb-2">
+    <input type="text" [(ngModel)]="Testo" #focusTrg (keyup)="onKey()"/>
+    <button
+      class="btn btn-success ml-2"
+      (click)="SendMess(Testo)"
+      [disabled]="!inUser"
+    >
+      Invia Messaggio
+    </button>
+
+    <button
+    class="btn btn-success ml-2 "
+    (click)="leave()"
+    [disabled]="!inUser"
+     >
+    Leave
+  </button>
+
+
+  </div>
+</div>

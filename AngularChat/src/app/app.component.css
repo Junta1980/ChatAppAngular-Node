@@ -1,0 +1,26 @@
+.chatpage{
+  min-height:150px !important;
+  width: 70%;
+  border: 1px solid gainsboro;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.usrom{
+  min-height:150px !important;
+  width: 20%;
+  border: 1px solid gainsboro;
+  max-height: 100vh;
+}
+
+.msg{
+  width: 99%;
+  word-wrap: break-word;
+  padding: 2px 2px 0 2px;
+  
+}
+
+.msgtype{
+  color: gray;
+}
+.lnk { display:block  !important; }
